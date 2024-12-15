@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"math"
 	"strconv"
 	"strings"
@@ -24,10 +23,7 @@ type ReceiptItem struct {
 }
 
 func validateReceipt(receipt Receipt) bool {
-
 	errs := validator.Validate(receipt)
-
-	fmt.Printf("%+v\n\n\n", errs)
 	return errs == nil
 }
 
